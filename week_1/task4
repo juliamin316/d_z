@@ -1,5 +1,5 @@
 from collections import Counter
-import re
+
 # INPUT
 with open('My_text.txt', 'r') as file:
     text = file.read()
