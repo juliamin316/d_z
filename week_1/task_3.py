@@ -23,4 +23,4 @@ def format_t(text, symbols_q):    #symbols_q количество символо
     return finished_t 
   
 
-write_data('output.txt', format_t(read_data('input.txt'), 40))
+write_data('output.txt', format_t(read_data('input.txt'), 21))
