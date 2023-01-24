@@ -1,0 +1,14 @@
+import unittest
+from task2 import *
+
+class Test(unittest.TestCase):
+    def test_data(self):
+        desired = ["KP2.2-01.3 - Vedomost'\n", \
+                   "KP2.2-10.3 - Vedomost'\n"]
+        data = "KP2.2-10.3 - Vedomost'\n" \
+               "KP2.2-01.3 - Vedomost'\n"
+        self.assertEqual(task2.sort_data(data), desired)
+
+
+if __name__ == '__main__':
+    unittest.main()
