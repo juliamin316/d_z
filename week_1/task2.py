@@ -1,15 +1,14 @@
 def read_data(file_name):
-    file = open(file_name)
-    content = file.read()
-    return content 
-    
+    with open(file_name) as file:
+        content = file.read()
+    return content
+
 def write_data(file_name, data):
-    f = open(file_name, "w")
-    f.write(data)
-    f.close()
-  
+    with open(file_name, "w") as f:
+        f.write(data)
+
 def format_text(text):
-    first_s = data.splitlines()  # подготовка для сортировки   
+    first_s = text.splitlines()  # подготовка для сортировки
     v_list = []
     for file_names in first_s:
         value = file_names[file_names.index('KP2.2-') + len('KP2.2-'):file_names.index(' - ')]
@@ -20,5 +19,5 @@ def format_text(text):
         sorted_data.append(str(i[1]) + '\n')
 
     return sorted_data
-    
+
 write_data('output.txt', format_text(read_data('input.txt')))
